@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Eminem",
+        "phone_number": "998",
+        "experience": "3",
+        "profession": "Coding",
+        "age": "25"
+    },
+    {
+        "name": "Tom Odell",
+        "phone_number": "999",
+        "experience": "6",
+        "profession": "Banking",
+        "age": "30"
+    },
+    {
+        "name": "Macan",
+        "phone_number": "994",
+        "experience": "2",
+        "profession": "Java developer",
+        "age": "26"
+    }
+]

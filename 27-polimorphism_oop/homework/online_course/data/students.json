@@ -1,0 +1,58 @@
+[
+    {
+        "name": "User1",
+        "email": "email",
+        "phone_number": "661",
+        "course_name": "Python",
+        "student_id": 1
+    },
+    {
+        "name": "User2",
+        "email": "usw",
+        "phone_number": "771",
+        "course_name": "Banking",
+        "student_id": 2
+    },
+    {
+        "name": "User3",
+        "email": "good",
+        "phone_number": "666",
+        "course_name": "Python",
+        "student_id": 3
+    },
+    {
+        "name": "User2",
+        "email": "day",
+        "phone_number": "777",
+        "course_name": "Banking",
+        "student_id": 4
+    },
+    {
+        "name": "User5",
+        "email": "max",
+        "phone_number": "123",
+        "course_name": "Banking",
+        "student_id": 5
+    },
+    {
+        "name": "User6",
+        "email": "server",
+        "phone_number": "990",
+        "course_name": "Python",
+        "student_id": 6
+    },
+    {
+        "name": "User7",
+        "email": "max",
+        "phone_number": "562",
+        "course_name": "Python",
+        "student_id": 7
+    },
+    {
+        "name": "User7",
+        "email": "max",
+        "phone_number": "562",
+        "course_name": "Banking",
+        "student_id": 8
+    }
+]

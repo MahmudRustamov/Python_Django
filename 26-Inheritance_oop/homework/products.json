@@ -1,0 +1,28 @@
+[
+    {
+        "type": "electronics",
+        "name": "iPhone 16 Pro Max",
+        "price": 1200,
+        "made_in": "China",
+        "year": "2025"
+    },
+    {
+        "type": "book",
+        "name": "The peace and war",
+        "price": 12000,
+        "pages": 120
+    },
+    {
+        "type": "clothing",
+        "name": "T-shirt",
+        "price": 15,
+        "color": "Black"
+
+    },
+    {
+        "type": "clothing",
+        "name": "Nike",
+        "price": 20,
+        "color": "white"
+    }
+]

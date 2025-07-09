@@ -1,0 +1,14 @@
+[
+    {
+        "id": "1",
+        "title": "Etik kiygan mushuk",
+        "price": 10000,
+        "author": "men"
+    },
+    {
+        "id": "2",
+        "title": "Lider shaxsiyati",
+        "price": 30000,
+        "author": "Brayan Treysi"
+    }
+]

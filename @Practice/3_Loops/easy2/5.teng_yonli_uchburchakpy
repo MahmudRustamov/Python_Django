@@ -1,0 +1,22 @@
+"""Foydalanuvchi 5 kiritsa, rasmdagi natija chiqsin. P.S. Tuzilgan sonni 6,7,8 va boshqa sonlar kiritib ham tekshirib ko'ring
+      
+       *
+      ***
+     *****
+    *******
+   *********
+  ***********
+
+"""
+
+
+
+num = 6
+
+
+for i in range(num):
+    for space in range(num - i + 1):
+        print(" ", end="")
+    for star in range(2*i+1):
+        print("*",end="")
+    print()
