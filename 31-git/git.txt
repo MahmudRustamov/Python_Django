@@ -1,0 +1,46 @@
+**Git** — bu *versiya boshqaruv tizimi (version control system)*  software bo‘lib, u kodlarni saqlashda va dasturiy ta'minotni ishlab chiqishda fayllarning tarixini kuzatish, o‘zgarishlarni nazorat qilish va bir nechta dasturchilar bilan birgalikda ishlash imkonini beradi.
+
+### Git nima uchun kerak?
+
+- **Kodning barcha versiyalarini saqlaydi** – har bir o‘zgarish tarixda qoladi.
+- **Jamoaviy ishlashni osonlashtiradi** – har kim o‘zining `branch`ida ishlashi mumkin.
+- **Xatoliklarni orqaga qaytarish oson** – agar xato qilinsa, oldingi versiyaga qaytish mumkin.
+- **Bir nechta funksiyalarni parallel ishlab chiqish mumkin.**
+
+### Asosiy tushunchalar:
+
+| Word | Definition |
+| --- | --- |
+| **Repository (repo)** | Loyihaning saqlanadigan joyi (mahalliy yoki GitHub’da). |
+| **Commit** | O‘zgarishlar tarixga qo‘shiladi (`save` qilishga o‘xshash). |
+| **Branch** | Loyihaning alohida yo‘nalmasi, masalan: `main`, `feature-a`. |
+| **Merge** | Bir branchdagi o‘zgarishlarni boshqasiga qo‘shish. |
+| **Clone** | Tayyor loyihani GitHub’dan o‘z kompyuteringizga ko‘chirish. |
+| **Push** | Mahalliy o‘zgarishlarni GitHub'ga yuborish. |
+| **Pull** | GitHub’dagi o‘zgarishlarni kompyuterga olish. |
+
+Git bilan ishlashdagi asosiy buyruqlar:
+
+```bash
+git init                    # Git repository yaratadi
+git status                  # Hozirgi holatni ko‘rsatadi
+git add .                   # Bu holatda folderdagi barcha fayllarni ozgarishni qoshadi
+git commit -m "Xabar"       # O‘zgarishni saqlash
+git log                     # Tarixni ko‘rish
+git log --oneline           # bitta lineda korsatadi
+git branch                  # Branchlarni ko‘rish
+git checkout -b yangi_branch  # Yangi branch yaratish va unga o‘tish
+git merge branch_nomi       # Branchdagi o‘zgarishni hozirgi branchga qo‘shish
+git clone url               # GitHub’dan loyihani ko‘chirish
+git push origin branch      # GitHub’ga yuklash
+git pull origin branch      # GitHub’dan o‘zgarishni olish
+git rm -rf .git             # git fileni ochiradi
+git branch -d <branch name> #branchlarni ochirish uchun
+```
+
+Git’da **global username va email** — bu sizning **butun kompyuteringizdagi barcha loyihalar** uchun ishlatiladigan avtoringiz haqida ma’lumotdir. Har safar `commit` qilganingizda, shu username va email Git tarixiga yoziladi.
+
+```bash
+git config --global [user.name](http://user.name/) "Your name"
+git config --global user.email "[email@example.com](mailto:email@example.com)"
+```
