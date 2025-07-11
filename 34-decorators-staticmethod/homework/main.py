@@ -1,26 +1,26 @@
-from datetime import datetime
-import csv 
+def append_to_file(text: str):
+    with open(file='logs.txt', mode="a", encoding="UTF-8") as file:
+        file.write(text)
 
 
-def my_decerator(func):
+def logger(func):
     def wrapper(*args, **kwargs):
-        result =  func(*args, **kwargs)
-        data = [datetime.now(), f"args: {args}", result]
-        with open("log.csv", mode="a", encoding="UTF-8", newline="") as file:
-            writer = csv.writer(file)
-            writer.writerow(data)
-            print("Data is saved")
-        return result
+        try:
+            result = func(*args, **kwargs)
+            text = f"{func.__name__}, args: {args}, kwargs: {kwargs}, result: {result}\n"
+            append_to_file(text=text)
+            return result
+        except Exception as exc:
+            text = f"{func.__name__}, args: {args}, kwargs: {kwargs}, error: {exc}\n"
+            append_to_file(text=text)
+            raise Exception(exc)
+
     return wrapper
 
 
-@my_decerator
-def add(num1, num2):
-    return num1 + num2
+@logger
+def add(a, b):
+    return a / b
 
-@my_decerator
-def subtraction(num1, num2):
-    return num1 - num2
 
-print(add(15, 23))
-print(subtraction(56, 35))
+print(add(1, 0))
