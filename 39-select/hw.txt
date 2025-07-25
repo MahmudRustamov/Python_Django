@@ -1,0 +1,51 @@
+Vazifa 1: Barcha xodimlar ro'yxatini ularning maoshiga ko'ra o'sish tartibida olish so'rovini yozing.
+select * from staff order by salary;
+
+
+Vazifa 2: Muayyan bo'limdagi (masalan, "Development") va ma'lum bir lavozimdag (masalan, "Senior Developer") xodimlarni topish so'rovini yozing.
+select  * from staff where department = 'Development' and position = 'Senior Developer';
+
+
+Vazifa 3: Har bir xodimning maoshini kompaniyadagi o'rtacha maosh bilan solishtirish so'rovini yozing.
+select full_name, salary, (select avg(salary) as average_salary from staff) from staff order by salary;
+
+
+Vazifa 4: Har bir bo'lim bo'yicha xodimlar sonini va ularning umumiy maoshlarini aniqlash so'rovini yozing.
+select department, count(*) as Number_of_staff, sum(salary) as total_salary from staff group by department;
+
+
+Vazifa 5: Eng yuqori maoshga ega bo'lgan xodimni topish so'rovini yozing.
+select full_name,department, salary,experience_years from staff where salary = (select max(salary) from staff);
+
+
+Vazifa 6: Har bir lavozimdagi xodimlarning o'rtacha tajribasini (yillarda) chiqaruvchi so'rovini yozing.
+select position, avg(experience_years) as  experience_years from staff group by position order by  experience_years asc;
+
+
+Vazifa 7: Muayyan yilda (masalan, 2020) ishga qabul qilingan va "Development" bo'limida ishlaydigan xodimlar ro'yxatini olish so'rovini yozing.
+select * from staff where hire_year = 2020 and department='Development';
+
+
+Vazifa 8: Eng kam tajribaga ega bo'lgan xodimni aniqlash so'rovini yozing.
+select full_name, experience_years, position, salary from staff where experience_years=(select min(experience_years) from staff);
+
+
+Vazifa 9: Har bir yilda va har bir bo'lim bo'yicha ishga qabul qilingan xodimlar sonini ko'rsatish so'rovini yozing.
+select hire_year, department, count(*) as hired_employees from staff group by hire_year, department order by hire_year;
+
+
+Vazifa 10: Maoshi o'rtacha maoshdan past bo'lgan va tajribasi 5 yildan kam xodimlar ro'yxatini chiqaruvchi so'rovini yozing.
+select hire_year, department, count(*) as hired_employees from staff group by hire_year, department order by hire_year;
+
+
+Vazifa 11: Har bir lavozim bo'yicha eng yuqori va eng past maoshga ega bo'lgan xodimlarni aniqlash so'rovini yozing.
+select position, min(salary), max(salary) from staff group by position;
+
+
+Vazifa 12: Har bir bo'limda eng ko'p xodim ishlaydigan lavozimni aniqlash so'rovini yozing.
+select position, department, count(*) as hired_employees from staff group by position, department;
+select department, count(*) AS counted_employees from staff group by department, position;
+
+
+Vazifa 13: Tajribasi bo'yicha eng tajribali 5 ta xodimni topish so'rovini yozing.
+select * from staff order by experience_years desc limit 5;

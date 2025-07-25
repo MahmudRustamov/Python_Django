@@ -1,0 +1,41 @@
+Bizda masalan task.py nomli file bor 
+python birorta fileni execute qilish uchun u kodlarni avval C dasturlash tiliga tarjima qiladi va song. C dan keyin compile qiladi. Va buni hammasini CPU qilib beradi. Va uning yordamchisi Xotira(SSD va RAM) shuningdek cpuda ham xotira boladi. compile davomida python kodlarni turli xil tasklarga bolib chiqadi. 
+CPU bajaradigan narsa bitta task boladi va Async va sync process bular mana shu taskni qanaqa bajarilishiga nisbatan farq qiladi. Va u task cpudan koproq foydalanishi mumkin yoki xotiradan koproq sarflashi mumkin.
+
+cpu ni ishchisini thread boladi va u tasklarni bajarishda yordam beradi
+
+
+thread bu kodni oqidigan ishchi . ____________________ syncda birinchi bitta ishni bajaradi va keyin boshqasiga otadi va bu vaqt oraligida boshqa tasklar kutib qoladi.
+
+
+Async bu bazi bir tasklardagi funksiyalar bajarilishi uchun  cpudan uzoq vaqt oladi va io band task mavjud bolsa birinchi taskni javobini kutib otirmidi va boshqa taskni bajarib birinchi taskni tekshirib keyin uni bajaradi va bu holat kodizmizni tezlashtirib beradi. 
+
+
+thread(ishchi)-> multithreading bu orqali qoshimcha thread yaratish mumkin va bizda bitta tasklarni bir nechta threading qilsa multithreading boladi va ular concurency va parallel boladi
+ paralell bu  funksiyalarni bolishin ishlash va bu pythonda mumkin emas bular pythonda concurency uslubida ishlaydi yani bitta thread ishlagan paytda boshqalari toxtab turadi. yani ular switch qilganligi uchun koproq vaqt oladi. agar biror ish bolsa orqa fonda bajariladigan ishni oshanga berib boshqa thread orqali asosiy ishni qilsak boladi. yani threadlarni switchini GLI control qiladi. 
+
+paralel ishlashdagi muammo bu ular memoryni share qiladi va 4 ta thread bolsa bitta memorydan foydalanadi masalan a=10, b=5, c=a+b 
+bitta thread a ni qiymatini 5 ga ozgaririshi mumkin va yana bittasi c ni qosh deydi va boshqa threadlar 15 javobini kutadi va ular oqib turib ish bajarguncha boshqasi uni almashtirib qoyishi mumkin va natija wrong boladi.
+Multi processing orqali 2 ta funksiyani 2 ta alohida protses qilib run qiladi.
+
+IOB paydo bolganda kutish vaqtini boshqa funksiyaga sarflashga yordam beradi
+
+
+
+
+sync - bu funksiyalarni ketma ketlikda execute qilish.
+
+Async - kutish vaqtini boshqa  narsani execute qilish uchun ishlatish 
+
+multithreading - bir nechta ishni concurency qilib bajarish buni GLI boshqaradi
+
+multiprocess - 2tadan oshiq funksiyalrni alohida protsesda bajarish alohida xotira qilib ishlatish
+
+
+
+
+
+
+
+compile qilish bu kodlarni mashina tiliga otkazish.
+Dasturlash tili bu kompyuterga buyruq berish yoli
